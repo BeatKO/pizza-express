@@ -13,7 +13,7 @@ app.use(express.static('static'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set('view engine', 'jade');
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 8081);
 
 app.locals.title = 'Pizza Express'
 app.locals.pizzas = {};

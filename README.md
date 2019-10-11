@@ -60,7 +60,7 @@ We'll get a basic server running using some code I stole from [the Express docum
 const express = require('express');
 const app = express();
 
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 8081);
 app.locals.title = 'Pizza Express';
 
 app.get('/', (request, response) => {
@@ -72,7 +72,7 @@ app.listen(app.get('port'), () => {
 });
 ```
 
-Fire up the server using `node server.js` and visit `http://localhost:3000/` to enjoy in the fruits of your copy and pasting labor.
+Fire up the server using `node server.js` and visit `http://localhost:8081/` to enjoy in the fruits of your copy and pasting labor.
 
 ## Unit Testing Our Server
 
@@ -281,7 +281,7 @@ it('should return a 200', (done) => {
 Awesome. Now, let's write a test verifying the content of the page located at `/`. You may or may not have noticed that we stored a few things as properties on our application instead of local variables in `server.js`.
 
 ```js
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 8081);
 app.locals.title = 'Pizza Express';
 ```
 
@@ -391,7 +391,7 @@ const path = require('path');
 
 app.use(express.static('static'));
 
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 8081);
 app.locals.title = 'Pizza Express';
 
 app.get('/', (request, response) => {
@@ -689,7 +689,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set('view engine', 'jade');
 
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 8081);
 app.locals.title = 'Pizza Express';
 app.locals.pizzas = {};
 

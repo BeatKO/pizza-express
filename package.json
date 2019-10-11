@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/turingschool-examples/pizza-express#readme",
   "dependencies": {
-    "express": "^4.13.3",
+    "express": "^4.17.1",
     "express-handlebars": "^2.0.1",
     "hbs": "^4.0.0",
     "pryjs": "^0.1.3",
