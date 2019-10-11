@@ -6,8 +6,11 @@ const bodyParser = require('body-parser');
 
 const generateId = require('./lib/generate-id');
 
+const port = 6379;
+const host = 'redis-host';
+
 var redis = require("redis"),
-  client = redis.createClient('6379');
+  client = redis.createClient(port, host);
 
 app.use(express.static('static'));
 app.use(bodyParser.urlencoded({ extended: true }));

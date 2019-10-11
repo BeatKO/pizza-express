@@ -1,0 +1,16 @@
+version: '3.1'
+services:
+  pizza_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pizza-app
+    depends_on:
+    - redis
+    ports:
+    - 8081:8081/tcp
+  redis:
+    container_name: redis-host
+    expose:
+    - '6379'
+    image: redis:alpine
